@@ -18,8 +18,8 @@ xml.rss :version => "2.0" do
         xml.topic_category_4 post.topic_category_4
         xml.topic_category_5 post.topic_category_5
         xml.pubDate post.created_at.to_s(:rfc822)
-        xml.link "http://www.cpturbo.org/cpt/index.php?showtopic=" + post.id.to_s
-        xml.guid post.id
+        xml.link "http://www.cpturbo.org/cpt/index.php?showtopic=" + post.post_id.to_s
+        xml.guid post.post_id
 
         xml.description Base64.decode64(post.description).to_s
       end
