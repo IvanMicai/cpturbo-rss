@@ -3,6 +3,7 @@
 <head>
   <title>CPTurbo RSS</title>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="shortcut icon" href='<%= asset_path('favicon.ico') %>' />
   <%= stylesheet_link_tag  '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag  '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js' %>
@@ -20,13 +21,10 @@
       <li class="active">
         <a href="/">RSS</a>
       </li>
-      <li>
-        <a href="https://devcenter.heroku.com/articles/how-heroku-works">Como funciona</a>
-      </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li class="navbar-right">
-        <a href="https://devcenter.heroku.com">Github</a>
+        <a target="_blank" href="https://github.com/IvanMicai/cpturbo-rss">Github</a>
       </li>
     </ul>
   </div>
