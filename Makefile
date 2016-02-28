@@ -24,7 +24,7 @@ app-migrate:
 	@docker run --name cpturboCrawlerAPP --net=cpturboCrawler -ti --rm -v `pwd`:/usr/src/app -p 3000:3000 cpturbo/crawler rake db:migrate RAILS_ENV=development
 
 app-console: 
-	@docker run --name cpturboCrawlerAPP --net=cpturboCrawler -ti --rm -e CPTURBO_USER='$(USER)' -e CPTURBO_PASS='$(PASS)' -v `pwd`:/usr/src/app -p 3000:3000 cpturbo/crawler bash
+	@docker run --name cpturboCrawlerAPP --net=cpturboCrawler -ti --rm -e CPTURBO_USER='$(USER)' -e CPTURBO_PASS='$(PASS)' -e CPTURBO_GA='$(GA)' -v `pwd`:/usr/src/app -p 3000:3000 cpturbo/crawler bash
 
 db-run:
 	docker run --name cpturboCrawlerDB --net=cpturboCrawler -e POSTGRES_PASSWORD=cpturbocrawler -v `pwd`/db-data:/var/lib/postgresql/data -d postgres
